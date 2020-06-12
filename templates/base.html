@@ -1,5 +1,5 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,13 +19,14 @@
 </head>
 <body>
 
-    <!-- Top Bar -->
-    {% include 'partials/_topbar.html' %}
+
     <!-- Navbar -->
     {% include 'partials/_navbar.html' %}
 
     <!-- Main Content -->
     {% block content %} {% endblock %}
+      <!-- bottom Bar -->
+    {% include 'partials/_bottombar.html' %}
     <!-- Footer -->
     {% include 'partials/_footer.html' %}
 
