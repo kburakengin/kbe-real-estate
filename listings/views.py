@@ -58,8 +58,11 @@ def search(request):
     # Price search
     if 'price' in request.GET:
         price = request.GET['price']
-        if price:
+        if price and price > list(price_choices.keys())[-1]:
             queryset_list = queryset_list.filter(price__lte=price)
+        else:
+            queryset_list= queryset_list
+
 
     context = {
         'state_choices': state_choices,
